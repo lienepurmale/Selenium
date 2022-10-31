@@ -16,8 +16,8 @@ public class BaseTestsExercise {
         driver = new ChromeDriver();
         driver.get("https://the-internet.herokuapp.com/");
 
-        driver.findElement(By.linkText("shifting_content")).click();
-        driver.findElement(By.linkText(("Example 1: Menu Element"))).click();
+        driver.findElement(By.cssSelector("a[href='/shifting_content']")).click();
+        driver.findElement(By.cssSelector("a[href='/shifting_content/menu']")).click();
 
         List<WebElement> elementMenu = driver.findElements(By.tagName("li"));
         System.out.println(elementMenu.size());
