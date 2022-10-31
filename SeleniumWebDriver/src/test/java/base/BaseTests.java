@@ -17,10 +17,11 @@ public class BaseTests {
         driver.manage().window().maximize();
 
         //to set size to for example the mobile device
-       // driver.manage().window().setSize(new Dimension(390, 844));
+        // driver.manage().window().setSize(new Dimension(390, 844));
 
         System.out.println(driver.getTitle());
         driver.quit();
+
 
     }
 
