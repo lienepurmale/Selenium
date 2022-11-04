@@ -19,18 +19,24 @@ public class HomePage {
         return new LoginPage(driver);
     }
 
-    public DropdownPage clickDropDown(){
+    public DropdownPage clickDropDown() {
         clickLink("Dropdown");
         return new DropdownPage(driver);
     }
 
-    public ForgotPasswordPage clickForgotPassword(){
+    public ForgotPasswordPage clickForgotPassword() {
         clickLink("Forgot Password");
-        return  new ForgotPasswordPage(driver);
+        return new ForgotPasswordPage(driver);
     }
 
     public void clickLink(String linkText) {
         driver.findElement(By.linkText(linkText)).click();
     }
+
+    public HoversPage clickHover() {
+        clickLink("Hovers");
+        return new HoversPage(driver);
+    }
+
 
 }
