@@ -53,5 +53,10 @@ public class HomePage {
         return new AlertsPage(driver);
     }
 
+    public UploadFilePage clickonFileUpload(){
+        clickLink("File Upload");
+        return new UploadFilePage(driver);
+    }
+
 
 }
