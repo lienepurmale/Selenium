@@ -58,5 +58,10 @@ public class HomePage {
         return new UploadFilePage(driver);
     }
 
+    public ContextMenuPage clickContextMenu(){
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
+    }
+
 
 }
