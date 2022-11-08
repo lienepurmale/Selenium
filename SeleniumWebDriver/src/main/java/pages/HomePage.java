@@ -63,5 +63,10 @@ public class HomePage {
         return new ContextMenuPage(driver);
     }
 
+    public FramePage clickOnEditor(){
+        clickLink("WYSIWYG Editor");
+        return new FramePage(driver);
+    }
+
 
 }
