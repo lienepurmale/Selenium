@@ -38,33 +38,38 @@ public class HomePage {
         return new HoversPage(driver);
     }
 
-    public KeyPressesPage clickKeyPresses(){
+    public KeyPressesPage clickKeyPresses() {
         clickLink("Key Presses");
         return new KeyPressesPage(driver);
     }
 
-    public HorizontalSliderPage clickHorizontalSlider(){
+    public HorizontalSliderPage clickHorizontalSlider() {
         clickLink("Horizontal Slider");
         return new HorizontalSliderPage(driver);
     }
 
-    public AlertsPage clickOnAlerts(){
+    public AlertsPage clickOnAlerts() {
         clickLink("JavaScript Alerts");
         return new AlertsPage(driver);
     }
 
-    public UploadFilePage clickonFileUpload(){
+    public UploadFilePage clickonFileUpload() {
         clickLink("File Upload");
         return new UploadFilePage(driver);
     }
 
-    public ContextMenuPage clickContextMenu(){
+    public ContextMenuPage clickContextMenu() {
         clickLink("Context Menu");
         return new ContextMenuPage(driver);
     }
 
-    public FramePage clickOnEditor(){
+    public EditorFramePage clickOnEditor() {
         clickLink("WYSIWYG Editor");
+        return new EditorFramePage(driver);
+    }
+
+    public FramePage clickOnFrames() {
+        clickLink("Frames");
         return new FramePage(driver);
     }
 
