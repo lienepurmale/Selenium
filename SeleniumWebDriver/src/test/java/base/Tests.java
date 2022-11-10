@@ -7,6 +7,8 @@ import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
 
+import java.util.concurrent.TimeUnit;
+
 
 public class Tests {
 
@@ -22,9 +24,10 @@ public class Tests {
 
         homePage = new HomePage(driver);
     }
- //To make sure that Tests in AlertTests page go to the homepage after each test
+
+    //To make sure that Tests in AlertTests page go to the homepage after each test
     @BeforeMethod
-    public void goHome(){
+    public void goHome() {
         driver.get("https://the-internet.herokuapp.com/");
     }
 
