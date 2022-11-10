@@ -2,9 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 
-public class FramePage {
+public class EditorFramePage {
 
     private WebDriver driver;
     private String editArea = "mce_0_ifr";
@@ -12,7 +11,7 @@ public class FramePage {
     private By increaseIndentButton = By.xpath("//*[@id=\"content\"]/div/div/div[1]/div[1]/div[2]/div/div[5]/button[2]");
 
 
-    public FramePage(WebDriver driver) {
+    public EditorFramePage(WebDriver driver) {
         this.driver = driver;
     }
 
