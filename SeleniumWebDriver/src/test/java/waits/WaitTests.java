@@ -15,4 +15,14 @@ public class WaitTests extends Tests {
         assertEquals(hiddenElemPage.getLoadedText(), "Hello World!");
 
     }
+
+    @Test
+    public void testRenderedElementLink(){
+        var dynamicElemPage = homePage.clickOnDynamicLoading();
+        var renderedElemPage = dynamicElemPage.clickOnRenderedElementLink();
+        renderedElemPage.clickStartButton();
+        renderedElemPage.isStartButtonDisplayed();
+        assertEquals(renderedElemPage.getLoadingText(), "Hello World!");
+
+    }
 }
