@@ -17,4 +17,9 @@ public class DynamicLoadingPage {
         driver.findElement(hiddenElementLink).click();
         return new HiddenElementPage(driver);
     }
+
+    public RenderedElementPage clickOnRenderedElementLink(){
+        driver.findElement(renderedElementLink).click();
+        return new RenderedElementPage(driver);
+    }
 }
