@@ -7,24 +7,44 @@ public class WindowManagement {
     private WebDriver driver;
     private WebDriver.Navigation navigate;
 
-    public WindowManagement(WebDriver driver){
+    public WindowManagement(WebDriver driver) {
         this.driver = driver;
         navigate = driver.navigate();
     }
 
-    public void goBack(){
+    public void goBack() {
         navigate.back();
     }
 
-    public void goForward(){
+    public void goForward() {
         navigate.forward();
     }
 
-    public void refreshPage(){
+    public void refreshPage() {
         navigate.refresh();
     }
 
-    public void goTo(String url){
+    public void goTo(String url) {
         navigate.to(url);
+    }
+
+    public void switchTab(String tabTitle) {
+        var windows = driver.getWindowHandles();
+
+        System.out.println("Number of tabs: " + windows.size());
+
+        System.out.println("Windows handles:");
+        windows.forEach(System.out::println);
+
+        for (String window : windows) {
+            System.out.println("Switching to window: " + window);
+            driver.switchTo().window(window);
+
+            System.out.println("Current window title: " + driver.getTitle());
+
+            if(tabTitle.equals(driver.getTitle())){
+                break;
+            }
+        }
     }
 }
