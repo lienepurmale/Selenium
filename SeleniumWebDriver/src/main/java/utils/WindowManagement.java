@@ -42,9 +42,14 @@ public class WindowManagement {
 
             System.out.println("Current window title: " + driver.getTitle());
 
-            if(tabTitle.equals(driver.getTitle())){
+            if (tabTitle.equals(driver.getTitle())) {
                 break;
             }
         }
+    }
+
+    public void switchToNewTab() {
+        var windows = driver.getWindowHandles();
+        windows.forEach(driver.switchTo()::window);
     }
 }
