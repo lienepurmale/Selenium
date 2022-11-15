@@ -45,14 +45,13 @@ public class Tests {
     }
 
     @AfterMethod
-    public void recordFailure(ITestResult result){
-        if(ITestResult.FAILURE == result.getStatus())
-        {
-            var camera = (TakesScreenshot)driver;
+    public void recordFailure(ITestResult result) {
+        if (ITestResult.FAILURE == result.getStatus()) {
+            var camera = (TakesScreenshot) driver;
             File screenshot = camera.getScreenshotAs(OutputType.FILE);
-            try{
+            try {
                 Files.move(screenshot, new File("resources/screenshots/" + result.getName() + ".png"));
-            }catch(IOException e){
+            } catch (IOException e) {
                 e.printStackTrace();
             }
         }
