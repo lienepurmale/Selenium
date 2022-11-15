@@ -24,13 +24,13 @@ public class DynamicLoadingPage {
         driver.findElement(renderedElementLink).click();
         return new RenderedElementPage(driver);
     }
+}
 
-    public RenderedElementPage rightClick() { ////To finish this test
+     /* public RenderedElementPage rightClick() { ////To finish this test
         Actions actions = new Actions(driver);
 
         WebElement redElem = driver.findElement(renderedElementLink);
         actions.contextClick(redElem).perform();
         return new RenderedElementPage(driver);
+*/
 
-    }
-}
