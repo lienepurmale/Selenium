@@ -21,12 +21,12 @@ public class NavigationTests extends Tests {
         getWindowManager().switchTab("New Window");
     }
 
-    @Test //To finish this test
-    public void testRightClick() {
-        var dynamicPage = homePage.clickOnDynamicLoading();
-        dynamicPage.clickOnRenderedElementLink();
-        dynamicPage.rightClick();
+   // @Test //To finish this test
+    //* public void testRightClick() {
+       // var dynamicPage = homePage.clickOnDynamicLoading();
+       // dynamicPage.clickOnRenderedElementLink();
+        //dynamicPage.rightClick();
 
     }
 
-}
+
