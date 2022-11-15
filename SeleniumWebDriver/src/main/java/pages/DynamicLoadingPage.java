@@ -2,6 +2,8 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 public class DynamicLoadingPage {
 
@@ -13,13 +15,22 @@ public class DynamicLoadingPage {
         this.driver = driver;
     }
 
-    public HiddenElementPage clickHiddenElementLink(){
+    public HiddenElementPage clickHiddenElementLink() {
         driver.findElement(hiddenElementLink).click();
         return new HiddenElementPage(driver);
     }
 
-    public RenderedElementPage clickOnRenderedElementLink(){
+    public RenderedElementPage clickOnRenderedElementLink() {
         driver.findElement(renderedElementLink).click();
         return new RenderedElementPage(driver);
+    }
+
+    public RenderedElementPage rightClick() { ////To finish this test
+        Actions actions = new Actions(driver);
+
+        WebElement redElem = driver.findElement(renderedElementLink);
+        actions.contextClick(redElem).perform();
+        return new RenderedElementPage(driver);
+
     }
 }
